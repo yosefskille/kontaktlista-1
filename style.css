@@ -1,0 +1,19 @@
+.contactform {
+    margin: bottom 20px;
+}
+
+.contactlist{
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+
+.contact-info {
+    flex-grow: 1;
+}
