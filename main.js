@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
      }
 
      const kontaktobjekt = document.createElement('li');
-     kontaktinfo.classname = 'contact-item';
+     kontaktinfo.className = 'contact-item';
 
      const kontaktinfo = document.createElement('span');
      kontaktinfo.className = 'contact-info';
@@ -59,8 +59,8 @@ const telefonredigera = document.createElement('input');
 telefonredigera.type = 'text';
 telefonredigera.value = aktuelltnamn;
 
-kontaktobjekt.replacechild(namnredigera, kontaktinfo);
-kontaktobjekt.replacechild(telefonredigera,kontaktobjekt.queryselector('button'))
+kontaktobjekt.replaceChild(namnredigera, kontaktinfo);
+kontaktobjekt.replaceChild(telefonredigera,kontaktobjekt.queryselector('button'))
 
 kontaktobjekt.queryselector('button').remove();
 const sparaknapp = document.createElement('button');
@@ -85,8 +85,8 @@ return;
      kontaktinfo.className = 'contact-info';
      kontaktinfo.textContent = `${namn} - ${telefon}`;
 
-     kontaktobjekt.replacechild(kontaktinfo, namnredigera);
-     kontaktobjekt.replacechild(kontaktinfo.querySelector('button'), telefonredigera);
+     kontaktobjekt.replaceChild(kontaktinfo, namnredigera);
+     kontaktobjekt.replaceChild(kontaktinfo.querySelector('button'), telefonredigera);
      kontaktobjekt.querySelector('button').remove();
 
 const ändraknapp = document.createElement('button');
@@ -99,7 +99,7 @@ const ändraknapp = document.createElement('button');
 kontaktobjekt.appendChild(ändraknapp);
 
 const raderaknapp = document.createElement('button');
-raderaknapp.textcontent = 'radera';
+raderaknapp.textContent = 'radera';
 raderaknapp.onclick = function() {
     contactlist.removeChild(kontaktobjekt);
 };
